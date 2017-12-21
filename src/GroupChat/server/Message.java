@@ -1,5 +1,6 @@
-package GroupChat.client;
+package GroupChat.server;
 
+import GroupChat.client.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
