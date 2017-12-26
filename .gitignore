@@ -1,2 +1,8 @@
 /build/
 /dist/
+/GroupWorkServer/build/
+/GroupWorkServer/dist/
+/GroupWorkServer/nbproject/private/
+/Server/build/
+/Server/dist/
+/Server/nbproject/private/
