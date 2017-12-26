@@ -294,8 +294,7 @@ public class Client extends JFrame implements ActionListener, ListSelectionListe
             String username = name_field.getText();
             clientName = username;
 
-            String salt = BCrypt.gensalt();
-            String password = BCrypt.hashpw(password_field.getText(), salt);
+            String password = password_field.getText();
 
             writer.println("Login");
             writer.println(username);
@@ -325,8 +324,7 @@ public class Client extends JFrame implements ActionListener, ListSelectionListe
             String username = name_field.getText();
             clientName = username;
 
-            String salt = BCrypt.gensalt();
-            String password = BCrypt.hashpw(password_field.getText(), salt);
+            String password = password_field.getText();
 
             writer.println("Register");
             writer.println(username);
