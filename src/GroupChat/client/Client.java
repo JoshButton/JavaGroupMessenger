@@ -292,6 +292,7 @@ public class Client extends JFrame implements ActionListener, ListSelectionListe
         try {
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             String username = name_field.getText();
+            clientName = username;
 
             String salt = BCrypt.gensalt();
             String password = BCrypt.hashpw(password_field.getText(), salt);
@@ -322,6 +323,7 @@ public class Client extends JFrame implements ActionListener, ListSelectionListe
         try {
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
             String username = name_field.getText();
+            clientName = username;
 
             String salt = BCrypt.gensalt();
             String password = BCrypt.hashpw(password_field.getText(), salt);
