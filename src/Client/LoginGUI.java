@@ -13,7 +13,7 @@ public class LoginGUI implements ActionListener {
     private final String salt = "$2a$10$lGOj9fZo88fkWeAoSQscbu";
     private JButton registerBtn = new JButton("Register");
     private String username;
-    private JLabel lblUsername, lblChatMessenger, lblSignIn, lblPassword;
+    private JLabel lblUsername, lblLogo, lblSignIn, lblPassword;
     private Communication c;
     private RegisterGUI registerGUI;
 
@@ -72,11 +72,11 @@ public class LoginGUI implements ActionListener {
         lblSignIn.setForeground(Color.GRAY);
         lblSignIn.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 17));
 
-        lblChatMessenger = new JLabel();
-        lblChatMessenger.setForeground(new Color(105, 105, 105));
-        lblChatMessenger.setBounds(150, 40, 450, 106);
-        lblChatMessenger.setIcon(new ImageIcon(MainActivityGUI.class.getResource("/images/jsm.png")));
-        frmLogin.getContentPane().add(lblChatMessenger);
+        lblLogo = new JLabel();
+        lblLogo.setForeground(new Color(105, 105, 105));
+        lblLogo.setBounds(150, 40, 450, 106);
+        lblLogo.setIcon(new ImageIcon(MainActivityGUI.class.getResource("/images/jsm.png")));
+        frmLogin.getContentPane().add(lblLogo);
 
         loginBtn.addActionListener(this);
         registerBtn.addActionListener(this);
