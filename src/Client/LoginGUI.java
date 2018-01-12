@@ -13,6 +13,7 @@ public class LoginGUI implements ActionListener {
     private final String salt = "$2a$10$lGOj9fZo88fkWeAoSQscbu";
     private JButton registerBtn = new JButton("Register");
     private String username;
+    private JLabel lblUsername, lblChatMessenger, lblSignIn, lblPassword;
     private Communication c;
     private RegisterGUI registerGUI;
 
@@ -28,6 +29,7 @@ public class LoginGUI implements ActionListener {
         frmLogin.setTitle("Login");
         frmLogin.getContentPane().setBackground(new Color(211, 211, 211));
         frmLogin.setBounds(100, 100, 763, 595);
+        frmLogin.setMinimumSize(new Dimension(763, 595));
         frmLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmLogin.getContentPane().setLayout(null);
 
@@ -37,7 +39,7 @@ public class LoginGUI implements ActionListener {
         frmLogin.getContentPane().add(panel);
         panel.setLayout(null);
 
-        JLabel lblUsername = new JLabel("USERNAME:");
+        lblUsername = new JLabel("USERNAME:");
         lblUsername.setFont(new Font("Lucida Grande", Font.BOLD, 13));
         lblUsername.setForeground(Color.GRAY);
         lblUsername.setBounds(21, 78, 98, 16);
@@ -48,28 +50,32 @@ public class LoginGUI implements ActionListener {
         panel.add(usernameField);
         usernameField.setColumns(10);
 
-        JLabel lblNewLabel = new JLabel("PASSWORD:");
-        lblNewLabel.setForeground(Color.GRAY);
-        lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 13));
-        lblNewLabel.setBounds(21, 128, 83, 22);
-        panel.add(lblNewLabel);
+        lblPassword = new JLabel("PASSWORD:");
+        lblPassword.setForeground(Color.GRAY);
+        lblPassword.setFont(new Font("Lucida Grande", Font.BOLD, 13));
+        lblPassword.setBounds(21, 128, 83, 22);
+        panel.add(lblPassword);
+
         passwordField.setBounds(120, 126, 240, 28);
         panel.add(passwordField);
+
         registerBtn.setBounds(122, 181, 112, 23);
         panel.add(registerBtn);
-        loginBtn.setBounds(238, 181, 122, 23);
-        panel.add(loginBtn);
-        loginBtn.setBackground(new Color(255, 255, 255));
-        JLabel lblSingIn = new JLabel("Sign in ");
-        lblSingIn.setBounds(192, 11, 58, 22);
-        panel.add(lblSingIn);
-        lblSingIn.setForeground(Color.GRAY);
-        lblSingIn.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 17));
 
-        JLabel lblChatMessenger = new JLabel("Chat Messenger");
+        loginBtn.setBounds(238, 181, 122, 23);
+        loginBtn.setBackground(new Color(255, 255, 255));
+        panel.add(loginBtn);
+
+        lblSignIn = new JLabel("Sign in ");
+        lblSignIn.setBounds(192, 11, 58, 22);
+        panel.add(lblSignIn);
+        lblSignIn.setForeground(Color.GRAY);
+        lblSignIn.setFont(new Font("Dialog", Font.BOLD | Font.ITALIC, 17));
+
+        lblChatMessenger = new JLabel();
         lblChatMessenger.setForeground(new Color(105, 105, 105));
-        lblChatMessenger.setFont(new Font("Tahoma", Font.PLAIN, 35));
-        lblChatMessenger.setBounds(245, 73, 330, 60);
+        lblChatMessenger.setBounds(150, 40, 450, 106);
+        lblChatMessenger.setIcon(new ImageIcon(MainActivityGUI.class.getResource("/images/jsm.png")));
         frmLogin.getContentPane().add(lblChatMessenger);
 
         loginBtn.addActionListener(this);
